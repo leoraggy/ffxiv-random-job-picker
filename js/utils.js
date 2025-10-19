@@ -30,7 +30,7 @@ function allMages() {
 function toggleJob(jobCode) {
   if (jobList.includes(jobCode)) {
     jobList = jobList.filter((job) => job !== jobCode);
-    document.getElementById(jobCode).style.filter = "grayscale(100%)";
+    document.getElementById(jobCode).style.filter = "grayscale(60%)";
   } else {
     jobList.push(jobCode);
     document.getElementById(jobCode).style.filter = "grayscale(0%)";
@@ -46,7 +46,7 @@ function addAll() {
 
 function clearAll() {
   for (job of jobList) {
-    document.getElementById(job).style.filter = "grayscale(100%)";
+    document.getElementById(job).style.filter = "grayscale(60%)";
   }
   jobList = [];
 }
