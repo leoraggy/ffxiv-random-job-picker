@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="icon" href="images/favicon.png" />
+    <title>FFXIV Random Job Picker</title>
+  </head>
+  <body>
+    <main>
+      <h1>Final Fantasy XIV Random Job Picker</h1>
+
+      <h2 id="jobTitle">Please Select Job</h2>
+      <!-- Display selected job -->
+      <div class="clearButton">
+        <img id="jobImage" src="images/allrounder.png" alt="" width="100px" />
+      </div>
+
+      <!-- Pick random job -->
+      <div id="jobButton">
+        <button class="form_style" onclick="generateJob()">Pick Job</button>
+      </div>
+
+      <h1>Jobs Selected</h1>
+      <div class="clearButton">
+        <button class="form_style" id="add" onclick="addAll()">ADD ALL</button>
+        <button class="form_style" id="clear" onclick="clearAll()">
+          CLEAR ALL
+        </button>
+      </div>
+      <!-- Job group buttons (same as before) -->
+      <div class="flex-container">
+        <div class="flex-item1">
+          <button id="pld" class="button" onclick="toggleJob('pld')">
+            <img src="images/pld.png" />
+          </button>
+          <button id="war" class="button" onclick="toggleJob('war')">
+            <img src="images/war.png" />
+          </button>
+          <button id="drk" class="button" onclick="toggleJob('drk')">
+            <img src="images/drk.png" />
+          </button>
+          <button id="gnb" class="button" onclick="toggleJob('gnb')">
+            <img src="images/gnb.png" />
+          </button>
+        </div>
+        <div class="flex-item2">
+          <button class="form_style" onclick="allTanks()">
+            ALL<img src="images/tank.png" />
+          </button>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item1">
+          <button id="whm" class="button" onclick="toggleJob('whm')">
+            <img src="images/whm.png" />
+          </button>
+          <button id="sch" class="button" onclick="toggleJob('sch')">
+            <img src="images/sch.png" />
+          </button>
+          <button id="ast" class="button" onclick="toggleJob('ast')">
+            <img src="images/ast.png" />
+          </button>
+          <button id="sge" class="button" onclick="toggleJob('sge')">
+            <img src="images/sge.png" />
+          </button>
+        </div>
+        <div class="flex-item2">
+          <button class="form_style" onclick="allHealers()">
+            ALL<img src="images/healer.png" />
+          </button>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item1">
+          <button id="mnk" class="button">
+            <img src="images/mnk.png" onclick="toggleJob('mnk')" />
+          </button>
+          <button id="drg" class="button">
+            <img src="images/drg.png" onclick="toggleJob('drg')" />
+          </button>
+          <button id="nin" class="button">
+            <img src="images/nin.png" onclick="toggleJob('nin')" />
+          </button>
+          <button id="sam" class="button">
+            <img src="images/sam.png" onclick="toggleJob('sam')" />
+          </button>
+          <button id="rpr" class="button">
+            <img src="images/rpr.png" onclick="toggleJob('rpr')" />
+          </button>
+          <button id="vpr" class="button">
+            <img src="images/vpr.png" onclick="toggleJob('vpr')" />
+          </button>
+        </div>
+        <div class="flex-item2">
+          <button class="form_style" onclick="allMelee()">
+            ALL<img src="images/melee.png" />
+          </button>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item1">
+          <button id="brd" class="button">
+            <img src="images/brd.png" onclick="toggleJob('brd')" />
+          </button>
+          <button id="mch" class="button">
+            <img src="images/mch.png" onclick="toggleJob('mch')" />
+          </button>
+          <button id="dnc" class="button">
+            <img src="images/dnc.png" onclick="toggleJob('dnc')" />
+          </button>
+        </div>
+        <div class="flex-item2">
+          <button class="form_style" onclick="allRanged()">
+            ALL<img src="images/physRanged.png" />
+          </button>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item1">
+          <button id="blm" class="button">
+            <img src="images/blm.png" onclick="toggleJob('blm')" />
+          </button>
+          <button id="smn" class="button">
+            <img src="images/smn.png" onclick="toggleJob('smn')" />
+          </button>
+          <button id="rdm" class="button">
+            <img src="images/rdm.png" onclick="toggleJob('rdm')" />
+          </button>
+          <button id="pct" class="button">
+            <img src="images/pct.png" onclick="toggleJob('pct')" />
+          </button>
+        </div>
+        <div class="flex-item2">
+          <button class="form_style" onclick="allMages()">
+            ALL<img src="images/magicRanged.png" />
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+  </body>
+</html>

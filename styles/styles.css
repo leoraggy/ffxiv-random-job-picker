@@ -1,0 +1,89 @@
+/* styles/styles.css - UPDATED */
+
+/* 1. Reset and Full Height */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #73795c;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+main {
+  margin: 1rem;
+}
+
+/* 2. Container Styling (The Rows) */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item1 {
+  display: flex;
+}
+
+/* 3. Button Styling for Responsiveness (kept the same as last response) */
+.button {
+  background-color: #e0cb7b;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+.button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.form_style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #5a5a5a;
+  background-color: #e0cb7b;
+  font-weight: bold;
+  font-size: large;
+}
+
+.form_style img {
+  margin-left: 10px;
+}
+
+.clearButton {
+  display: flex;
+  justify-content: center;
+}
+
+#jobButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  gap: 10px;
+}
+
+#jobTitle {
+  text-align: center;
+}
+
+#add {
+  color: green;
+}
+
+#clear {
+  color: red;
+}
