@@ -29,6 +29,9 @@ main {
 }
 
 /* 3. Button Styling for Responsiveness (kept the same as last response) */
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
 .button {
   background-color: #e0cb7b;
   cursor: pointer;
