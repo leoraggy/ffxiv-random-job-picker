@@ -5,23 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="icon" href="images/favicon.png" />
+    <script src="js/data.js" defer></script>
+    <script src="js/options.js" defer></script>
+    <script src="js/jobFunctions.js" defer></script>
     <title>FFXIV Random Job Picker</title>
   </head>
   <body>
-    <main>
-      <h1>Final Fantasy XIV Random Job Picker</h1>
-
-      <h2 id="jobTitle">Please Select Job</h2>
-      <!-- Display selected job -->
-      <div class="clearButton">
-        <img id="jobImage" src="images/allrounder.png" alt="" width="100px" />
+    <header>
+      <div class="heading">
+        <h1>Final Fantasy XIV Random Job Picker</h1>
+        <button class="options" onclick="toggleOption()">Options</button>
+        <div id="option">
+          <label for="party">Chooose Party:</label>
+          <select name="party" id="party">
+            <option value="solo">Solo</option>
+            <option value="lightParty">Light Party</option>
+            <option value="fullParty">Full Party</option></select
+          ><br />
+          <label for="unique">Unique Jobs</label>
+          <label class="switch">
+            <input type="checkbox" id="unique" checked />
+            <span class="slider round"></span> </label
+          ><br />
+        </div>
       </div>
 
-      <!-- Pick random job -->
-      <div id="jobButton">
-        <button class="form_style" onclick="generateJob()">Pick Job</button>
+      <div class="job-container" id="job-container">
+        <h2 id="jobTitle">Please Select Job</h2>
+        <!-- Display selected job -->
+        <div class="jobs" id="jobs">
+          <div class="job">
+            <img id="p1" src="images/allrounder.png" alt="" width="100px" />
+            <br />
+            <h3 class="jobText">YOU</h3>
+          </div>
+        </div>
+        <!-- Pick random job -->
+        <div id="jobButton">
+          <button class="form_style" id="generator" onclick="generateJob()">
+            Generate Job
+          </button>
+        </div>
       </div>
+    </header>
 
+    <main id="main">
       <h1>Jobs Selected</h1>
       <div class="clearButton">
         <button class="form_style" id="add" onclick="addAll()">ADD ALL</button>
@@ -29,7 +57,6 @@
           CLEAR ALL
         </button>
       </div>
-      <!-- Job group buttons (same as before) -->
       <div class="flex-container">
         <div class="flex-item1">
           <button id="pld" class="button" onclick="toggleJob('pld')">
@@ -139,7 +166,5 @@
         </div>
       </div>
     </main>
-    <script src="js/data.js"></script>
-    <script src="js/utils.js"></script>
   </body>
 </html>

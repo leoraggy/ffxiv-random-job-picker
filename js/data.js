@@ -44,6 +44,7 @@ const jobTitle = {
   smn: "Summoner",
   rdm: "Red Mage",
   pct: "Pictomancer",
+  blu: "Blue Mage",
 };
 
 const tankJobs = ["pld", "war", "drk", "gnb"];
@@ -51,5 +52,6 @@ const healerJobs = ["whm", "sch", "ast", "sge"];
 const meleeJobs = ["mnk", "drg", "nin", "sam", "rpr", "vpr"];
 const physRangedJobs = ["brd", "mch", "dnc"];
 const casterJobs = ["blm", "smn", "rdm", "pct"];
+const dpsJobs = [...meleeJobs, ...physRangedJobs, ...casterJobs];
 
 let jobList = Object.keys(jobData);

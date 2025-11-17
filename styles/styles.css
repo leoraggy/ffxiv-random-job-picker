@@ -1,5 +1,11 @@
-/* styles/styles.css - UPDATED */
+@import url(switch.css);
 
+:root {
+  --primary: #73795c;
+  --secondary: #e0cb7b;
+}
+
+/* styles/styles.css - UPDATED */
 /* 1. Reset and Full Height */
 html,
 body {
@@ -7,8 +13,16 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #73795c;
+  background-color: var(--primary);
   font-family: sans-serif;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: medium;
+  background-color: var(--primary);
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -33,7 +47,7 @@ button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 .button {
-  background-color: #e0cb7b;
+  background-color: var(--secondary);
   cursor: pointer;
   padding: 5px;
   border-radius: 5px;
@@ -55,8 +69,8 @@ button:hover {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid #5a5a5a;
-  background-color: #e0cb7b;
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
   font-weight: bold;
   font-size: large;
 }
@@ -68,6 +82,31 @@ button:hover {
 .clearButton {
   display: flex;
   justify-content: center;
+}
+
+.jobs {
+  display: flex;
+  justify-content: center;
+}
+
+.lightParty {
+  display: "none";
+}
+
+.fullParty {
+  display: "none";
+}
+
+#p1,
+#p2,
+#p3,
+#p4,
+#p5,
+#p6,
+#p7,
+#p8 {
+  padding: 0 1rem;
+  display: "none";
 }
 
 #jobButton {
@@ -89,4 +128,32 @@ button:hover {
 
 #clear {
   color: red;
+}
+
+.options {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: var(--secondary);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+#option {
+  background-color: var(--secondary);
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  padding: 1rem;
+  display: none;
+}
+
+.job-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
